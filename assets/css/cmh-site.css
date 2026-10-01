@@ -1,0 +1,61 @@
+/* ==========================================================================
+   CAREER MASTERY HUB - TAILWIND STYLESHEET & UTILITIES
+   ========================================================================== */
+
+/* Custom Color Tokens & Utilities for Tailwind fallback */
+:root {
+  --green: #0B3B24;
+  --green-hover: #047857;
+  --green-light: #10B981;
+  --green-bg-soft: #EBF3EE;
+  --ink-1: #101412;
+  --ink-2: #2E3A33;
+  --muted: #627267;
+  --line: #DFE6E1;
+  --gold: #D97706;
+}
+
+/* Custom Navigation Drawer Mobile Override */
+.site-nav[data-open="true"] .nav-links {
+  display: flex !important;
+  position: fixed;
+  top: 76px;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.25rem;
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  z-index: 40;
+}
+
+.site-nav.scrolled {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.08);
+  height: 68px;
+}
+
+/* Status message feedback */
+.form-status.success {
+  display: block !important;
+  background-color: #D1FAE5;
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+}
+
+.form-status.error {
+  display: block !important;
+  background-color: #FEE2E2;
+  color: #991B1B;
+  border: 1px solid #FCA5A5;
+}
+
+.cookie-banner.hidden {
+  display: none !important;
+}
+
+/* FAQ Details animation */
+.cmh-faq-item[open] .cmh-faq-icon {
+  transform: rotate(45deg);
+}
