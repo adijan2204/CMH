@@ -1,0 +1,226 @@
+/* ==========================================================================
+   CAREER MASTERY HUB - ISOLATED WATERMARKS & ANIMATIONS SUITE
+   ========================================================================== */
+
+/* Keyframe Animations */
+@keyframes float-bob-y {
+
+  0%,
+  100% {
+    transform: translateY(-16px);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes float-bob-x {
+
+  0%,
+  100% {
+    transform: translateX(-20px);
+  }
+
+  50% {
+    transform: translateX(-5px);
+  }
+}
+
+@keyframes zoom-fade-2 {
+
+  0%,
+  100% {
+    transform: scale(0.92);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-fade-3 {
+
+  0%,
+  100% {
+    transform: scale(0.95) rotate(-2deg);
+  }
+
+  50% {
+    transform: scale(1.05) rotate(2deg);
+  }
+}
+
+@keyframes rotateme {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation Classes */
+.float-bob-y {
+  animation: float-bob-y 4s ease-in-out infinite;
+}
+
+.float-bob-x {
+  animation: float-bob-x 5s ease-in-out infinite;
+}
+
+.zoom-fade-2 {
+  animation: zoom-fade-2 6s linear infinite;
+}
+
+.zoom-fade-3 {
+  animation: zoom-fade-3 7s ease-in-out infinite;
+}
+
+.rotate-me {
+  animation: rotateme 28s linear infinite;
+}
+
+/* Base Watermark Layer Rules */
+.section-watermark {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+  opacity: 0.08;
+}
+
+/* Footer Large Expansive Watermark */
+.footer-watermark-bg {
+  position: absolute;
+  right: -4%;
+  bottom: -2%;
+  width: 75%;
+  max-width: 960px;
+  min-width: 480px;
+  opacity: 0.10;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+  filter: drop-shadow(0 0 40px rgba(52, 211, 153, 0.10));
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 768px) {
+  .footer-watermark-bg {
+    width: 110%;
+    right: -15%;
+    bottom: -10px;
+    opacity: 0.07;
+  }
+}
+
+/* ==========================================================================
+   INFOGRAPHIC VERTICAL ROADMAP COMPONENT (STUDY ABROAD JOURNEY STYLE)
+   ========================================================================== */
+.infographic-roadmap-card {
+  background: #ffffff;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+}
+
+.infographic-roadmap-card:hover {
+  transform: translateY(-6px);
+  border-color: #0B3B24;
+  box-shadow: 0 20px 35px -10px rgba(11, 59, 36, 0.25);
+}
+
+.roadmap-icon-badge {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #0B3B24 0%, #047857 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.25rem;
+  box-shadow: 0 8px 18px -4px rgba(11, 59, 36, 0.45);
+  position: relative;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.infographic-roadmap-card:hover .roadmap-icon-badge {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.roadmap-number-tag {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  background: #0B3B24;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+}
+
+.roadmap-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.725rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.roadmap-status-completed {
+  background-color: #DCFCE7;
+  color: #0B3B24;
+  border: 1px solid #A7F3D0;
+}
+
+.roadmap-status-in-progress {
+  background-color: #FFEDD5;
+  color: #C2410C;
+  border: 1px solid #FED7AA;
+}
+
+.roadmap-status-upcoming {
+  background-color: #F1F5F9;
+  color: #64748B;
+  border: 1px solid #E2E8F0;
+}
+
+.roadmap-connector-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #0B3B24 0%, #047857 50%, #0B3B24 100%);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+@keyframes orbitRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.orbit-plane-anim {
+  transform-origin: center center;
+  animation: orbitRotate 18s linear infinite;
+}
+
